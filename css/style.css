@@ -122,3 +122,43 @@ opacity:0;
 }
 
 }
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+.hero{
+
+justify-content:center;
+padding-right:0;
+padding-left:0;
+
+}
+
+.overlay{
+
+padding:35px;
+margin:20px;
+text-align:center;
+
+}
+
+h1{
+
+font-size:28px;
+
+}
+
+p{
+
+font-size:15px;
+
+}
+
+button{
+
+padding:14px 35px;
+font-size:16px;
+
+}
+
+}
