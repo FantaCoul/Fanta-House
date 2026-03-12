@@ -122,31 +122,23 @@ opacity:0;
 }
 
 }
-
 /* MOBILE RESPONSIVE */
 
 @media (max-width:768px){
 
 .hero{
 
-height:auto;
-min-height:100dvh;
-
 justify-content:center;
-align-items:center;
-
-padding:20px;
+padding-right:0;
+padding-left:0;
 
 }
 
 .overlay{
 
-padding:45px;
-
-width:90%;
-max-width:420px;
-
-margin:auto;
+padding:35px;
+margin:20px;
+text-align:center;
 
 }
 
@@ -158,13 +150,13 @@ font-size:28px;
 
 p{
 
-font-size:14px;
+font-size:15px;
 
 }
 
 button{
 
-padding:16px 35px;
+padding:14px 35px;
 font-size:16px;
 
 }
