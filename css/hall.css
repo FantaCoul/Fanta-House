@@ -1,0 +1,244 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",sans-serif;
+}
+
+body{
+overflow:hidden;
+background:black;
+}
+
+/* HALL */
+
+.hall{
+
+width:100vw;
+height:100vh;
+
+background:url("../hall.png") center/cover no-repeat;
+
+position:relative;
+
+}
+
+
+/* HUD */
+
+.hud{
+
+position:absolute;
+
+top:50%;
+right:60px;
+
+transform:translateY(-50%);
+
+width:380px;
+height:420px; /* rectangle plus long */
+
+padding:30px;
+
+background:rgba(20,20,35,0.75);
+
+border-radius:16px;
+
+border:1px solid rgba(180,160,255,0.4);
+
+backdrop-filter:blur(14px);
+
+color:#f0f0ff;
+
+box-shadow:
+0 10px 40px rgba(0,0,0,0.35);
+
+display:flex;
+flex-direction:column;
+
+}
+
+
+/* TITLE */
+
+.hud-title{
+
+font-size:13px;
+
+letter-spacing:2px;
+
+color:#a78bff;
+
+margin-bottom:14px;
+
+}
+
+
+/* TEXT */
+
+.hud-text{
+
+flex:1;
+
+overflow-y:auto;
+
+font-size:17px;
+
+line-height:1.9;
+
+}
+
+
+/* MARKERS */
+
+.marker{
+
+position:absolute;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+cursor:pointer;
+
+}
+
+
+/* DOT */
+
+.marker::before{
+
+content:"";
+
+width:22px;
+height:22px;
+
+border-radius:50%;
+
+background:#9f7cff;
+
+box-shadow:
+0 0 10px rgba(159,124,255,0.8),
+0 0 22px rgba(159,124,255,0.4);
+
+animation:pulse 3s infinite;
+
+}
+
+
+/* LABEL */
+
+.marker span{
+
+background:rgba(25,25,40,0.85);
+
+padding:10px 18px;
+
+border-radius:30px;
+
+color:white;
+
+font-size:15px;
+
+opacity:0;
+
+transition:0.3s;
+
+}
+
+
+/* HOVER */
+
+.marker:hover span{
+
+opacity:1;
+
+transform:translateX(6px);
+
+}
+
+
+/* PULSE */
+
+@keyframes pulse{
+
+0%{transform:scale(1)}
+50%{transform:scale(1.25)}
+100%{transform:scale(1)}
+
+}
+
+
+/* POSITIONS */
+
+.about{
+left:15%;
+top:50%;
+}
+
+.projects{
+left:20%;
+top:63%;
+}
+
+.gallery{
+left:25%;
+top:24%;
+}
+
+.secret{
+left:34%;
+top:52%;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hud{
+
+right:20px;
+
+width:300px;
+
+height:380px;
+
+}
+
+.marker span{
+
+font-size:14px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hud{
+
+top:auto;
+
+bottom:25px;
+
+transform:none;
+
+right:20px;
+
+width:90%;
+
+height:300px;
+
+}
+
+.marker::before{
+
+width:18px;
+height:18px;
+
+}
+
+}
