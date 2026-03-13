@@ -1,3 +1,5 @@
+/* TYPEWRITER TEXT */
+
 const text = `Welcome to the Villa Experience.
 
 You are now standing inside the main hall of this interactive environment.
@@ -9,7 +11,6 @@ Each glowing point around you represents a room that contains a different part o
 Move your cursor around the hall and explore the different spaces.
 
 When a location interests you, click on its glowing marker to continue your journey.`
-
 
 let i = 0
 const speed = 28
@@ -33,6 +34,18 @@ setTimeout(typeWriter,speed)
 }
 
 typeWriter()
+
+
+/* MOBILE GUIDE TOGGLE */
+
+const guideBtn = document.getElementById("toggleGuide")
+const hud = document.querySelector(".hud")
+
+guideBtn.addEventListener("click", () => {
+
+hud.classList.toggle("open")
+
+})
 
 
 /* NAVIGATION */
