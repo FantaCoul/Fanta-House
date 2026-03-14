@@ -257,15 +257,15 @@ transform:translateX(-50%);
 
 right:auto;
 
-/* espace plus grand du bas */
+/* espace sécurisé pour barre téléphone */
 
-bottom:60px;
+bottom:calc(80px + env(safe-area-inset-bottom));
 
 width:92%;
 
 /* HUD fermé */
 
-height:70px;
+height:65px;
 
 padding:14px;
 
@@ -273,31 +273,33 @@ overflow:hidden;
 
 }
 
-/* TEXTE CACHÉ QUAND FERMÉ */
+/* cacher texte quand fermé */
 
 .hud-text{
 display:none;
 }
 
-/* HUD OUVERT */
+/* HUD ouvert */
 
 .hud.open{
 
-height:260px;
+height:280px;
 
 }
 
-/* TEXTE APPARAIT QUAND OUVERT */
+/* afficher texte quand ouvert */
 
 .hud.open .hud-text{
 display:block;
 }
 
-/* NOMS VISIBLES */
+/* noms visibles */
 
 .marker span{
 opacity:1;
 }
+
+/* points légèrement plus petits */
 
 .marker::before{
 width:18px;
