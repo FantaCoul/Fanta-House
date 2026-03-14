@@ -10,6 +10,7 @@ overflow:hidden;
 background:black;
 }
 
+
 /* HALL */
 
 .hall{
@@ -30,13 +31,11 @@ position:relative;
 
 position:absolute;
 
-top:50%;
 right:60px;
-
-transform:translateY(-50%);
+bottom:60px;
 
 width:380px;
-height:420px; /* rectangle plus long */
+height:420px;
 
 padding:30px;
 
@@ -50,11 +49,46 @@ backdrop-filter:blur(14px);
 
 color:#f0f0ff;
 
-box-shadow:
-0 10px 40px rgba(0,0,0,0.35);
+box-shadow:0 10px 40px rgba(0,0,0,0.35);
 
 display:flex;
 flex-direction:column;
+
+transition:0.35s;
+
+}
+
+
+/* HEADER */
+
+.hud-header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+margin-bottom:14px;
+
+}
+
+
+/* GUIDE BUTTON */
+
+#toggleHud{
+
+background:#9f7cff;
+
+border:none;
+
+padding:6px 14px;
+
+border-radius:20px;
+
+color:white;
+
+cursor:pointer;
+
+font-size:12px;
 
 }
 
@@ -69,8 +103,6 @@ letter-spacing:2px;
 
 color:#a78bff;
 
-margin-bottom:14px;
-
 }
 
 
@@ -82,7 +114,7 @@ flex:1;
 
 overflow-y:auto;
 
-font-size:17px;
+font-size:14px;
 
 line-height:1.9;
 
@@ -194,7 +226,7 @@ top:52%;
 }
 
 
-/* RESPONSIVE */
+/* TABLET */
 
 @media(max-width:900px){
 
@@ -203,7 +235,6 @@ top:52%;
 right:20px;
 
 width:300px;
-
 height:380px;
 
 }
@@ -216,21 +247,44 @@ font-size:14px;
 
 }
 
+
+/* MOBILE */
+
 @media(max-width:600px){
 
 .hud{
 
-top:auto;
+left:50%;
 
-bottom:45px;
+transform:translateX(-50%);
 
-transform:none;
+right:auto;
 
-right:20px;
+bottom:35px;
 
-width:90%;
+width:92%;
 
-height:200px;
+height:90px;
+
+padding:18px;
+
+overflow:hidden;
+
+}
+
+/* OPEN HUD */
+
+.hud.open{
+
+height:260px;
+
+}
+
+/* NAMES ALWAYS VISIBLE */
+
+.marker span{
+
+opacity:1;
 
 }
 

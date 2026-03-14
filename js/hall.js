@@ -1,33 +1,39 @@
 /* TYPEWRITER TEXT */
 
-const text = `Welcome to the Villa Experience.
+const text = document.getElementById("typeText")
 
-You are now standing inside the main hall of this interactive environment.
+const message = `Welcome to the villa hall.
 
-This place works like a small digital world.
+This interactive environment works like a small exploration game.
 
-Each glowing point around you represents a room that contains a different part of the experience.
+Each glowing point represents a room inside the villa.
 
-Move your cursor around the hall and explore the different spaces.
+About Me :
+Discover the bedroom where you can learn more about me.
 
-When a location interests you, click on its glowing marker to continue your journey.`
+Projects :
+Visit the library containing my creations and school projects.
+
+Night Gallery :
+Climb upstairs to explore the nocturnal gallery.
+
+Secret Room :
+Find the hidden chamber containing my contact information.
+
+Move your cursor over the glowing points to reveal their names.
+Click on a location to enter a room.`
 
 let i = 0
-const speed = 28
 
 function typeWriter(){
 
-const element = document.getElementById("typeText")
+if(i < message.length){
 
-if(i < text.length){
-
-element.innerHTML += text.charAt(i)
-
-element.scrollTop = element.scrollHeight
+text.innerHTML += message.charAt(i)
 
 i++
 
-setTimeout(typeWriter,speed)
+setTimeout(typeWriter,25)
 
 }
 
@@ -36,40 +42,14 @@ setTimeout(typeWriter,speed)
 typeWriter()
 
 
-/* MOBILE GUIDE TOGGLE */
 
-const guideBtn = document.getElementById("toggleGuide")
-const hud = document.querySelector(".hud")
+/* HUD OPEN / CLOSE */
 
-guideBtn.addEventListener("click", () => {
+const toggle = document.getElementById("toggleHud")
+const hud = document.getElementById("hud")
+
+toggle.addEventListener("click", () => {
 
 hud.classList.toggle("open")
 
 })
-
-
-/* NAVIGATION */
-
-document.querySelector(".about").onclick = () => {
-
-window.location.href="about.html"
-
-}
-
-document.querySelector(".projects").onclick = () => {
-
-window.location.href="projects.html"
-
-}
-
-document.querySelector(".gallery").onclick = () => {
-
-window.location.href="gallery.html"
-
-}
-
-document.querySelector(".secret").onclick = () => {
-
-window.location.href="secret.html"
-
-}
