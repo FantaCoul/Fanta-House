@@ -56,7 +56,9 @@ flex-direction:column;
 
 transition:0.35s;
 
-z-index:10;
+/* guide toujours au dessus */
+
+z-index:1000;
 
 }
 
@@ -137,7 +139,9 @@ gap:12px;
 
 cursor:pointer;
 
-z-index:2;
+/* sous le guide */
+
+z-index:1;
 
 }
 
@@ -185,7 +189,7 @@ transition:0.3s;
 }
 
 
-/* HOVER (DESKTOP) */
+/* HOVER DESKTOP */
 
 .marker:hover span{
 
@@ -288,6 +292,7 @@ display:block;
 
 .marker span{
 opacity:0;
+pointer-events:none;
 }
 
 /* label actif */
