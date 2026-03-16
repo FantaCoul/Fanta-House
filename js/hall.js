@@ -43,7 +43,7 @@ typeWriter()
 
 
 
-/* HUD OPEN / CLOSE */
+/* HUD OPEN CLOSE */
 
 const toggle = document.getElementById("toggleHud")
 const hud = document.getElementById("hud")
@@ -53,3 +53,33 @@ toggle.addEventListener("click", () => {
 hud.classList.toggle("open")
 
 })
+
+
+
+/* MOBILE MARKER LOOP */
+
+if(window.innerWidth <= 600){
+
+const markers = document.querySelectorAll(".marker")
+
+let index = 0
+
+function showMarker(){
+
+markers.forEach(marker => marker.classList.remove("active"))
+
+markers[index].classList.add("active")
+
+index++
+
+if(index >= markers.length){
+index = 0
+}
+
+}
+
+showMarker()
+
+setInterval(showMarker,3000)
+
+}

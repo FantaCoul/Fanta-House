@@ -56,6 +56,8 @@ flex-direction:column;
 
 transition:0.35s;
 
+z-index:10;
+
 }
 
 
@@ -135,6 +137,8 @@ gap:12px;
 
 cursor:pointer;
 
+z-index:2;
+
 }
 
 
@@ -181,7 +185,7 @@ transition:0.3s;
 }
 
 
-/* HOVER */
+/* HOVER (DESKTOP) */
 
 .marker:hover span{
 
@@ -254,16 +258,11 @@ font-size:14px;
 
 left:50%;
 transform:translateX(-50%);
-
 right:auto;
-
-/* espace sécurisé pour barre téléphone */
 
 bottom:calc(80px + env(safe-area-inset-bottom));
 
 width:92%;
-
-/* HUD fermé */
 
 height:65px;
 
@@ -273,33 +272,31 @@ overflow:hidden;
 
 }
 
-/* cacher texte quand fermé */
-
 .hud-text{
 display:none;
 }
 
-/* HUD ouvert */
-
 .hud.open{
-
 height:280px;
-
 }
-
-/* afficher texte quand ouvert */
 
 .hud.open .hud-text{
 display:block;
 }
 
-/* noms visibles */
+/* labels cachés */
 
 .marker span{
+opacity:0;
+}
+
+/* label actif */
+
+.marker.active span{
 opacity:1;
 }
 
-/* points légèrement plus petits */
+/* point mobile */
 
 .marker::before{
 width:18px;
